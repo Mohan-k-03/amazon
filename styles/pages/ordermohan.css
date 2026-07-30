@@ -101,7 +101,7 @@
     }
 }
 .product-image-container{
-    text-align: center;
+    text-align: left;
 }
 .product-image-container img{
     max-width: 110px;
@@ -159,7 +159,7 @@
 
 }@media (max-width: 450px) {
   .product-image-container {
-    text-align: center;
+    text-align: left;
     margin-bottom: 25px;
   }
 
