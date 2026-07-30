@@ -1,14 +1,16 @@
-# amazon
+# Amazon Clone
 
-A short description for the "amazon" repository — replace this with a one-line summary of what the project does.
+A simple Amazon-like storefront built with only HTML, CSS and JavaScript. This project is a front-end clone intended for learning and practice — it replicates common e-commerce UI patterns (product listing, search, cart UI) without a backend.
 
 ## Table of Contents
 
 - [About](#about)
+- [Demo](#demo)
 - [Features](#features)
 - [Tech / Languages](#tech--languages)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Project Structure](#project-structure)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -16,20 +18,26 @@ A short description for the "amazon" repository — replace this with a one-line
 
 ## About
 
-Provide a longer description of the project here. Explain the purpose, goals, and any important context (for example: is this a sample app, a scraper, a web service, learning project, interview prep, etc.).
+This is an Amazon UI clone implemented with plain HTML, CSS and JavaScript. It's intended as a learning project to practice responsive layouts, DOM manipulation, and basic client-side state (cart behavior). There is no backend — product data is stored in static JSON or JavaScript objects.
+
+## Demo
+
+If you host this repository (GitHub Pages or a static server), open `index.html` to see the app. You can also run it locally (instructions below).
 
 ## Features
 
-- Feature 1 — short description
-- Feature 2 — short description
-- Feature 3 — short description
+- Product listing grid
+- Product detail view (modal or separate page)
+- Search and basic filtering
+- Add to cart and cart preview
+- Responsive layout for desktop and mobile
+- Simple client-side persistence (localStorage)
 
 ## Tech / Languages
 
-The repository appears to contain code for one or more languages. Update this list to reflect the actual languages used in the project:
-
-- Language 1 (e.g., JavaScript / Node.js)
-- Language 2 (e.g., Python)
+- HTML
+- CSS (vanilla; you can replace with a framework if desired)
+- JavaScript (vanilla)
 
 ## Installation
 
@@ -40,65 +48,63 @@ git clone https://github.com/Mohan-k-03/amazon.git
 cd amazon
 ```
 
-2. Follow language-specific setup instructions (examples):
-
-- For Node.js projects:
+2. Since this is a static front-end project, you can open `index.html` directly in the browser. For a better local experience (so fetch/XHR works), run a simple static server:
 
 ```bash
-npm install
-```
+# Python 3 built-in server
+python -m http.server 8000
+# then open http://localhost:8000 in your browser
 
-- For Python projects:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # on macOS/Linux
-.venv\Scripts\activate    # on Windows
-pip install -r requirements.txt
+# or with Node.js using `serve` if installed
+npx serve .
 ```
 
 ## Usage
 
-Describe how to run the project. Examples:
+- Open `index.html` or run a local static server and navigate to the site.
+- Browse products, use the search box, add items to the cart, and view the cart.
+- Product data can be edited in the `data` or `assets` file where products are defined (e.g., `products.js` or `data/products.json`).
 
-```bash
-# Node / npm example
-npm start
+## Project Structure
 
-# Python example
-python main.py
-```
+A suggested file structure — adjust to match your repo:
 
-Add example configuration, environment variables, or sample commands here.
+- index.html
+- css/
+  - styles.css
+- js/
+  - app.js
+  - products.js
+- assets/
+  - images/
+- data/
+  - products.json
+
+Update these paths to match your actual project layout.
 
 ## Development
 
-Describe how to run tests and linters, and how to set up the development environment:
-
-```bash
-# run tests
-npm test
-# or
-pytest
-```
+- Edit the HTML, CSS, and JS files in the repository.
+- Use your browser DevTools to debug layout and JavaScript.
+- To persist simple cart state across reloads, use `localStorage`.
 
 ## Contributing
 
-Contributions are welcome. Please:
+Contributions are welcome for improvements (UI polish, accessibility, more realistic product data). To contribute:
 
-1. Fork the repository
-2. Create a branch for your feature or fix: `git checkout -b feature/my-change`
-3. Commit your changes: `git commit -m "Add my change"
-4. Push to your branch and open a pull request
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/my-change`
+3. Commit your changes: `git commit -m "Add feature X"`
+4. Push and open a pull request
 
-Add any project-specific contribution guidelines or links to issue templates if available.
+Please include screenshots and a short description of the change.
 
 ## License
 
-Specify a license for the project (for example, MIT). If you don't have one yet, add a LICENSE file or update this section when you choose a license.
+This project is available under the MIT License. See LICENSE file for details. If you prefer a different license, tell me and I can update this.
 
 ## Contact
 
 Maintainer: Mohan-k-03
 
-For questions or help, open an issue in this repository.
+Open an issue for questions or feature requests.
