@@ -1,3 +1,5 @@
+import{cart }from '../data/cart.js';
+
 let productsHTML='';
 
 
@@ -25,7 +27,7 @@ productsHTML+=`<div class="product-container">
                 </div>
 
                 <div class="product-quantity-container">
-                    <select>
+                    <select class="js-select-option">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -80,6 +82,13 @@ document.querySelectorAll('.js-add-to-cart')
             quantity:1
            })
            };
+           
+           let cartQuantity=0;
+           cart.forEach((item)=>{
+            cartQuantity+=item.quantity;
+           })
+           document.querySelector('.js-cart-quantity').innerHTML=cartQuantity
+           console.log(cartQuantity)
            console.log(cart)
     });
 });
