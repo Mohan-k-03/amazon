@@ -1,7 +1,7 @@
-export function getProduct(){
+export function getProduct(productId){
    let matchingProduct;
     products.forEach((product)=>{
-        if(product.id===products.id){
+        if(product.id===productId){
     matchingProduct=product;
     } 
 });

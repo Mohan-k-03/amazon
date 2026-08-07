@@ -20,9 +20,9 @@ localStorage.setItem('cart',JSON.stringify(cart));
 
 export function addtoCart(productId){let matchingItem;
            
-           cart.forEach((cartitem)=>{
-            if(productId === cartitem.productId){
-                matchingItem=cartitem;
+           cart.forEach((cartItem)=>{
+            if(productId === cartItem.productId){
+                matchingItem=cartItem;
             }
            });
            
@@ -52,9 +52,9 @@ export function removeFromCart(productId){
 
 export function updateDeliveryOption(productId,deliveryOptionId){
     let matchingItem;
- cart.forEach((cartitem)=>{
-            if(productId === cartitem.productId){
-                matchingItem=cartitem;
+ cart.forEach((cartItem)=>{
+            if(productId === cartItem.productId){
+                matchingItem=cartItem;
                 matchingItem.deliveryOptionId=deliveryOptionId;
             };
              
